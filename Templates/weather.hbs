@@ -1,0 +1,45 @@
+{{>Header}}
+
+<div class="container main-body">
+    <div class="text-center">
+        <form class="form" method="post" action="/weather">
+            <div class="d-flex justify-content-center">
+                <div class="input-group w-50">
+                    <input required type="text" class="form-control" placeholder="Enter city name" class="inp-grp"
+                        name="city_name" id="city_name" />
+                    <input class="btn btn-primary" type="submit" />
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<section id="output-screen">
+    <div class="container">
+        <div class="output-box">
+            <div class="box mt-4 mb-5">
+                <div class="top-box d-flex justify-content-between">
+                    <p id="today"></p>
+                    <p>{{resData.location.localtime}}</p>
+                </div>
+                <h5 class="mt-3">Your output will show here</h5>
+
+                {{#if resData}}
+                   
+                    <p>{{resData.current.condition.text}}<img src='https:{{resData.current.condition.icon}}' /></p>
+                    <p class="degree">{{resData.current.temp_c}}&deg;C</p>
+                    <p>{{resData.location.country}}, {{resData.location.region}}, {{resData.location.name}}</p>
+                {{else}}
+                    <p class="text-danger">Please enter location</p>
+                {{/if}}
+
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+   var dayName= new Date().toLocaleDateString('en-US', {weekday: 'long'})
+   console.log(dayName)
+   document.getElementById('today').innerText=dayName;
+</script>
+{{>Footer}}

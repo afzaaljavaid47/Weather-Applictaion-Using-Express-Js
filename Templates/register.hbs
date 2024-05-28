@@ -1,0 +1,57 @@
+{{>Header}}
+
+<div class="container d-flex justify-content-center mt-3">
+    <div class="container m-4 w-50">
+        <form method="post" action="/register">
+            <div class="form-group mb-4">
+                <div class="row g-3">
+                    <div class="col">
+                        <input type="text" name="fname" class="form-control" placeholder="First name" aria-label="First name">
+                    </div>
+                    <div class="col">
+                        <input type="text" name="lname" class="form-control" placeholder="Last name" aria-label="Last name">
+                    </div>
+                </div>
+            </div>
+            <div class="form-group mb-4">
+                <input type="email" name="email" placeholder="Enter email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            </div>
+            <div class="form-group mb-4">
+                <div class="row g-3">
+                    <div class="col">
+                        <select class="form-select" name="gender" aria-label="Default select example">
+                            <option selected>Select Gender</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                            <option value="Other">Other</option>
+                          </select>
+                    </div>
+                    <div class="col">
+                        <input type="tel" name="tel" class="form-control" placeholder="Enter phone #">
+                    </div>
+                    <div class="col">
+                        <input type="number" name="age" class="form-control" placeholder="Age">
+                    </div>
+                </div>
+            </div>
+            <div class="form-group mb-4">
+                <input type="password" name="password" placeholder="Enter password" class="form-control" id="exampleInputPassword1">
+            </div>
+            <div class="form-group mb-4">
+                <input type="password" name="c_password" placeholder="Confirm Password" class="form-control" id="exampleInputPassword1">
+            </div>
+            <div class="form-group mb-2 text-center">
+                {{#if success}}  
+                    <label class="text-center text-success">{{success}}</label>                    
+                {{/if}}
+                {{#if error}}  
+                    <label class="text-center text-danger">{{error}}</label>                 
+                {{/if}}
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</div>
+
+{{>Footer}}

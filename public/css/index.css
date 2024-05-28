@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto&display=swap');
+h1{
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 1px;
+}
+p{
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 1px;
+}
+.footer{
+    margin-bottom: 3rem;
+    width: 250px;
+    height: 100px;
+    margin: 0 auto;
+}
+.bg-black{
+    background-color: black;
+    color: white;
+    padding: 1rem 0rem;
+}
+.main-body{
+    padding: 2rem 1rem 1rem 4rem;
+}
+.output-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.box{
+    background-color: black;
+    border-radius: 10px;
+    /* padding: 1rem; */
+    color: white;
+    text-align: center;
+    width: 400px;
+    height: 280px;
+}
+.degree{
+    font-size: 40px;
+    margin: 0;
+    margin-top: -20px;
+    padding: 0;
+    font-weight: bold;
+
+}
+.top-box{
+    background-color: darkslategray;
+    color: white;
+    text-align: center;
+    padding: 10px 10px 0px 10px;
+    border-radius: 10px;
+}
+.home-section{
+   padding: 5rem;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.btn-chck-now{
+    background-color: #EEEDEF !important;
+    color: black;
+    text-transform: uppercase;
+    border-radius: 30px !important;
+    margin-top: 2rem !important;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5)
+}
+.btn-chck-now:hover{
+    background-color: black !important;
+    color: white !important;
+    border-radius: 0px !important;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5)
+}
+.giphy-embed{
+    width: 100%;
+    height: 400px;
+}
+
+.about-img{
+    width: 40%;
+    height: 200px;
+}
+.mern-txt{
+    color: orange;
+}
+@media only screen and (max-width: 768px) {
+    .home-section{
+        padding: 2rem;
+     }
+     .btn-chck-now{
+        margin-top: 1rem !important;
+     }
+  }
